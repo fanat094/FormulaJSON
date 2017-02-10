@@ -79,14 +79,12 @@ public class MainActivity extends AppCompatActivity {
                     hm_noparentziro.put("parent_id", moldova_parent_id);
 
                     formList2.add(hm_noparentziro);
-                    Log.d("FORM2", hm_noparentziro.get("id"));
-                };
+                    Log.d("FORM2", formList2.get(0).get("id"));
 
-                //Add your values in your `ArrayList` as below:
+                };
             }
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
     }
 }

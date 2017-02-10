@@ -1,0 +1,80 @@
+{
+  "id": 308,
+  "created_at": "2017-02-06 14:57:38",
+  "updated_at": "2017-02-06 16:17:38",
+  "title": "Cats",
+  "slug": "cats-1",
+  "description": "Android cats test",
+  "lat": "48.681412517",
+  "long": "26.592750549",
+  "author_id": "18",
+  "type_id": "7",
+  "author": "Artem Semeniuk",
+  "author_avatar": "https:\/\/lh4.googleusercontent.com\/--0YMFKFpbiE\/AAAAAAAAAAI\/AAAAAAAAAMA\/S-ldJSOEP5o\/photo.jpg?sz=50",
+  "cover": "https:\/\/ifoll.io\/public\/events_media\/form_589871fb7c2f5-07c345d0eca11d0bc97c894751ba1b46.jpg",
+  "cover_poster": null,
+  "rating": "4",
+  "type_ro": "Distrac\u0163ii",
+  "type_ru": "\u0420\u0430\u0437\u0432\u043b\u0435\u0447\u0435\u043d\u0438\u044f",
+  "type_en": "Funny",
+  "current_user_rated": "1",
+  "media": [
+    {
+      "filename": "07c345d0eca11d0bc97c894751ba1b46.jpg",
+      "id": 412,
+      "type": "1",
+      "size": "30613",
+      "file_path": "https:\/\/ifoll.io\/public\/events_media\/form_589871fb7c2f5-07c345d0eca11d0bc97c894751ba1b46.jpg",
+      "poster": null
+    },
+    {
+      "filename": "caturdayshutterstock_149320799.jpg",
+      "id": 413,
+      "type": "1",
+      "size": "63220",
+      "poster": null
+    },
+    {
+      "filename": "videoplayback.mp4",
+      "id": 429,
+      "type": "2",
+      "size": "4352712",
+      "file_path": "https:\/\/ifoll.io\/public\/events_media\/form_5898853d72489-videoplayback.mp4",
+      "poster": null
+    }
+  ],
+  "comments": [
+    {
+      "id": 54,
+      "parent_id": "0",
+      "text": "love cats",
+      "created_at": "2017-02-08 18:17:09",
+      "author": "Tester",
+      "author_avatar": "https:\/\/ifoll.io\/public\/images\/avatars\/no-avatar.png"
+    },
+    {
+      "id": 55,
+      "parent_id": "54",
+      "text": "Tester, me too",
+      "created_at": "2017-02-08 18:17:57",
+      "author": "Artem Semeniuk",
+      "author_avatar": "https:\/\/lh4.googleusercontent.com\/--0YMFKFpbiE\/AAAAAAAAAAI\/AAAAAAAAAMA\/S-ldJSOEP5o\/photo.jpg?sz=50"
+    },
+    {
+      "id": 56,
+      "parent_id": "0",
+      "text": "Ok",
+      "created_at": "2017-02-08 18:36:38",
+      "author": "Tester",
+      "author_avatar": "https:\/\/ifoll.io\/public\/images\/avatars\/no-avatar.png"
+    },
+    {
+      "id": 67,
+      "parent_id": "0",
+      "text": "\u041e\u043a",
+      "created_at": "2017-02-10 04:00:39",
+      "author": "andre",
+      "author_avatar": "https:\/\/ifoll.io\/public\/images\/avatars\/form_5883bbd234c28ava-IMG_0005.JPG"
+    }
+  ]
+}

@@ -3,6 +3,8 @@ package ua.dima.yamschikov.formulajson;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -15,10 +17,15 @@ import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
+    ListView lv;
+    ArrayList<String> tt = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        lv = (ListView) findViewById(R.id.list);
 
         ReadJson();
         //loadJSONFromAsset();
@@ -53,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
             HashMap<String, String> hm_parentziro;
             ArrayList<HashMap<String, String>> formList2 = new ArrayList<HashMap<String, String>>();
             HashMap<String, String> hm_noparentziro;
+            tt = new ArrayList<>();
 
             for (int i = 0; i < m_jArry.length(); i++) {
                 JSONObject jo_inside = m_jArry.getJSONObject(i);
@@ -80,9 +88,19 @@ public class MainActivity extends AppCompatActivity {
 
                     formList2.add(hm_noparentziro);
                     Log.d("FORM2", formList2.get(0).get("id"));
-
                 };
             }
+
+            tt.add(String.valueOf(formList));
+            tt.add(String.valueOf(formList2));
+            Log.d("TT0",tt.get(0).toString());
+            Log.d("TT1",tt.get(1).toString());
+
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                    android.R.layout.simple_list_item_1, android.R.id.text1, tt);
+
+            lv.setAdapter(adapter);
+
         } catch (JSONException e) {
             e.printStackTrace();
         }

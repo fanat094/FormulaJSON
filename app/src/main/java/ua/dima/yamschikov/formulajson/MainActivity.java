@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
-
     ListView lv;
     ArrayList<String> tt = new ArrayList<>();
 
@@ -28,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         lv = (ListView) findViewById(R.id.list);
 
         ReadJson();
-        //loadJSONFromAsset();
     }
 
     public String loadJSONFromAsset() {
@@ -65,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             for (int i = 0; i < m_jArry.length(); i++) {
                 JSONObject jo_inside = m_jArry.getJSONObject(i);
                 //Log.d("Details-->id", jo_inside.getString("id"));
-               // Log.d("Details-->parent_id", jo_inside.getString("parent_id"));
+                // Log.d("Details-->parent_id", jo_inside.getString("parent_id"));
                 String moldova_id = jo_inside.getString("id");
                 String moldova_parent_id = jo_inside.getString("parent_id");
 
@@ -89,6 +87,24 @@ public class MainActivity extends AppCompatActivity {
                     formList2.add(hm_noparentziro);
                     Log.d("FORM2", formList2.get(0).get("id"));
                 };
+            }
+
+            for (int t=0; t<formList.size();t++){
+                String yyFOR = formList.get(t).get("id");
+                int ttt = Integer.parseInt(yyFOR);
+                Log.d("FORD1", "FORD1"+ttt);
+                int ttt2 = 0;
+
+                for (int t2=0; t2<formList2.size();t2++){
+                    String yyFOR2 = formList2.get(t2).get("parent_id");
+                    ttt2 = Integer.parseInt(yyFOR2);
+                    Log.d("FORD2", "FORD2"+ttt2);
+
+                    if (ttt==ttt2){};
+
+                    Log.d("YES", "YES"+ttt2);
+
+                }
             }
 
             tt.add(String.valueOf(formList));

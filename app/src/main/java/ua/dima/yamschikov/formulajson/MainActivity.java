@@ -70,39 +70,49 @@ public class MainActivity extends AppCompatActivity {
                 int result = Integer.parseInt(moldova_parent_id);
 
                 if (result == 0) {
-                    Log.d("RESULT:","RESULT = 0");
+                    //Log.d("RESULT:","RESULT = 0");
                     hm_parentziro = new HashMap<String, String>();
                     hm_parentziro.put("id", moldova_id);
                     hm_parentziro.put("parent_id", moldova_parent_id);
 
                     formList.add(hm_parentziro);
-                    Log.d("FORM1", hm_parentziro.get("id"));
+                    //Log.d("FORM1", hm_parentziro.get("id"));
                 }
                 else{
-                    Log.d("RESULT:","RESULT != 0");
+                    //Log.d("RESULT:","RESULT != 0");
                     hm_noparentziro = new HashMap<String, String>();
                     hm_noparentziro.put("id", moldova_id);
                     hm_noparentziro.put("parent_id", moldova_parent_id);
 
                     formList2.add(hm_noparentziro);
-                    Log.d("FORM2", formList2.get(0).get("id"));
+                    //Log.d("FORM2", formList2.get(0).get("id"));
                 };
             }
 
             for (int t=0; t<formList.size();t++){
-                String yyFOR = formList.get(t).get("id");
-                int ttt = Integer.parseInt(yyFOR);
-                Log.d("FORD1", "FORD1"+ttt);
-                int ttt2 = 0;
+                String list1_id = formList.get(t).get("id");
+                int int_list1_id = Integer.parseInt(list1_id);
+                //Log.d("List1", "List1   "+int_list1_id);
+                int int_list2_parent_id = 0;
+                int int_list2_id =0;
 
                 for (int t2=0; t2<formList2.size();t2++){
-                    String yyFOR2 = formList2.get(t2).get("parent_id");
-                    ttt2 = Integer.parseInt(yyFOR2);
-                    Log.d("FORD2", "FORD2"+ttt2);
+                    String list2_parent_id = formList2.get(t2).get("parent_id");
+                    int_list2_parent_id = Integer.parseInt(list2_parent_id);
+                    String list2_id = formList2.get(t2).get("id");
+                    int_list2_id = Integer.parseInt(list2_id);
+                    //Log.d("List2", "List2   "+int_list2_parent_id);
 
-                    if (ttt==ttt2){};
+                    if (int_list1_id==int_list2_parent_id){
 
-                    Log.d("YES", "YES"+ttt2);
+                        Log.d("YES", "YES_OUT: "+int_list1_id+":"+int_list2_id);
+                    }
+
+                    else {
+
+                        Log.d("NO","NO");
+                    }
+
 
                 }
             }
